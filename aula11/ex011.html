@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfândega</title>
+</head>
+<body>
+    <h1>Alfândega</h1>
+    Digite seu país: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificarPais()">
+    <div id="res"></div>
+
+    <script>
+        function verificarPais() {
+            var paisp = document.getElementById('pais');
+            var res = document.getElementById('res');
+            var vel = String(pais.value);
+            res.innerText = `Seu país é ${vel}`;
+            if (vel == 'Brasil') {
+                res.innerHTML = 'Você é Brasileiro!';
+            } else {
+                res.innerHTML = 'Você é Estrangeiro!';
+            }
+        }
+    </script>
+</body>
+</html>
